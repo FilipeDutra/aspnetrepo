@@ -13,14 +13,17 @@ namespace WebApplication1.Pages.Usuarios
         [BindProperty]
 
         public Usuario usuario { get; set; }
-        public void OnGet(string nome, string senha)
+        public void OnGet(string nome, string senha, string cpf, DateTime dataNascimento, string email)
         {
             if (usuario == null)
             {
                 usuario = new Usuario();
             }
             usuario.Nome = nome;
-            usuario.senha = senha;
+            usuario.Senha = senha;
+            usuario.Cpf = cpf;
+            usuario.DataNascimento = dataNascimento;
+            usuario.Email = email;
             
         }
     }
